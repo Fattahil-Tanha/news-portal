@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Paper</title>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="" onload="fetchCategories()">
+    <!-- navbar -->
+    <header class="container mx-auto my-5">
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl bg-indigo-500">News</a>
+              <a class="mx-2 normal-case text-xl">Portal</a>
+            </div>
+            <div class="flex-none mx-5">
+                <a class="mx-5 text-xl hover:underline" href="">News</a>
+              <a class="text-xl hover:underline" href="">Blogs</a>
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="images/valentin-lacoste-XKot3TXP1-o-unsplash.jpg" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="mt-2">
+          <!-- section 2nd navbar------- -->
+          <section class="container mx-auto my-5">
+            <div  class="container-fluid bg-base-100">
+                <h1 class="mx-auto text-3xl text-center text-indigo-500 font-serif">Categories</h1>
+                  <ul id="categories-container" class="flex  px-1 justify-evenly cursor-pointer p-6 text-emerald-50 font-mono font-semibold">
+                    <!-- <a class=" hover:underline pointer text-lg">Breaking News</a>
+                    <a class=" hover:underline pointer text-lg">Regular News</a>
+                    <a class=" hover:underline pointer text-lg">International News</a>
+                    <a class=" hover:underline pointer text-lg">Sports</a>
+                    <a class=" hover:underline pointer text-lg">Entertainment</a>
+                    <a class=" hover:underline pointer text-lg">Culture</a>
+                    <a class=" hover:underline pointer text-lg">Arts</a>
+                    <a class=" hover:underline pointer text-lg">All News</a> -->
+                  </ul>
+              </div>
+          </section>
+    </header>
+
+    <!-- alert section------- -->
+    <section class="container mx-auto flex justify-start">
+        <div class="alert shadow-lg">
+            <div>
+              <p><span id="news-count" class="px-2">  </span>items found for category <span id="category-name"></span></p>
+            </div>
+          </div>
+    </section>
+
+    <!------------------ main section-------------- -->
+    <main class="container-lg mx-auto mt-10 px-20">
+        <section id="card-container" class=" flex justify-start flex-col container-fluid ">
+            <div class="card card-side bg-base-100 shadow-xl w-100 h-80 container-fluid mb-5">
+                <figure><img class="h-70 w-80" src="images/gioele-fazzeri-cEfbNxNqZ8g-unsplash (1).jpg" alt="Movie"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title">New movie is released!</h2>
+                  <p>Click the button to watch on Jetflix app.</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary ">Watch</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
